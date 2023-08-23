@@ -10,13 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  photo_manager: ^2.5.2
-  shimmer: ^2.0.0
+  photo_manager: ^2.7.1
+  shimmer: ^3.0.0
   image_crop: ^0.4.1
-  camera: ^0.10.3+1
-  image: ^4.0.15
-  video_player: ^2.5.2
-  image_picker: ^0.8.6+3
+  camera: ^0.10.5+3
+  image: ^4.0.17
+  video_player: ^2.7.0
+  image_picker: ^1.0.2
 
 dev_dependencies:
   flutter_test:
