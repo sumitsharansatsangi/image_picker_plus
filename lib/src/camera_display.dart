@@ -27,7 +27,7 @@ class CustomCameraDisplay extends StatefulWidget {
   final AsyncValueSetter<SelectedImagesDetails>? callbackFunction;
 
   const CustomCameraDisplay({
-    Key? key,
+    super.key,
     required this.appTheme,
     required this.tapsNames,
     required this.selectedCameraImage,
@@ -39,7 +39,7 @@ class CustomCameraDisplay extends StatefulWidget {
     required this.clearVideoRecord,
     required this.moveToVideoScreen,
     required this.callbackFunction,
-  }) : super(key: key);
+  });
 
   @override
   CustomCameraDisplayState createState() => CustomCameraDisplayState();

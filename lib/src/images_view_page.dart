@@ -30,7 +30,7 @@ class ImagesViewPage extends StatefulWidget {
   final bool showImagePreview;
   final SliverGridDelegateWithFixedCrossAxisCount gridDelegate;
   const ImagesViewPage({
-    Key? key,
+    super.key,
     required this.multiSelectedImages,
     required this.multiSelectionMode,
     required this.clearMultiImages,
@@ -46,7 +46,7 @@ class ImagesViewPage extends StatefulWidget {
     required this.gridDelegate,
     required this.maximumSelection,
     this.callbackFunction,
-  }) : super(key: key);
+  });
 
   @override
   State<ImagesViewPage> createState() => _ImagesViewPageState();
@@ -394,7 +394,9 @@ class _ImagesViewPageState extends State<ImagesViewPage>
               if (widget.callbackFunction != null) {
                 await widget.callbackFunction!(details);
               } else {
-                Navigator.of(context).maybePop(details);
+                if(context.mounted) {
+                  Navigator.of(context).maybePop(details);
+                }
               }
             }
           } else {
@@ -424,7 +426,9 @@ class _ImagesViewPageState extends State<ImagesViewPage>
             if (widget.callbackFunction != null) {
               await widget.callbackFunction!(details);
             } else {
-              Navigator.of(context).maybePop(details);
+              if(context.mounted) {
+                Navigator.of(context).maybePop(details);
+              }
             }
           }
         },

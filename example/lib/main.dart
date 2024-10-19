@@ -11,7 +11,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -259,11 +259,11 @@ class DisplayImages extends StatefulWidget {
   final double aspectRatio;
   final SelectedImagesDetails details;
   const DisplayImages({
-    Key? key,
+    super.key,
     required this.details,
     required this.selectedBytes,
     required this.aspectRatio,
-  }) : super(key: key);
+  });
 
   @override
   State<DisplayImages> createState() => _DisplayImagesState();
@@ -294,7 +294,7 @@ class _DisplayImagesState extends State<DisplayImages> {
 
 class _DisplayVideo extends StatefulWidget {
   final SelectedByte selectedByte;
-  const _DisplayVideo({Key? key, required this.selectedByte}) : super(key: key);
+  const _DisplayVideo({required this.selectedByte});
 
   @override
   State<_DisplayVideo> createState() => _DisplayVideoState();

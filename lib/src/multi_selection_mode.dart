@@ -9,12 +9,12 @@ class MultiSelectionMode extends StatelessWidget {
 
   final File image;
   const MultiSelectionMode({
-    Key? key,
+    super.key,
     required this.image,
     required this.imageSelected,
     required this.multiSelectedImage,
     required this.multiSelectionMode,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

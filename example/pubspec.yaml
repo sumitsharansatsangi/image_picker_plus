@@ -13,7 +13,8 @@ dependencies:
     sdk: flutter
   image_picker_plus:
     path: ../
-  video_player: ^2.7.0
+  video_player:
+    git: https://github.com/kumsumit/video_player.git
 
   cupertino_icons: ^1.0.2
 
@@ -21,7 +22,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
 
